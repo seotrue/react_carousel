@@ -1,0 +1,18 @@
+$imgURL:'/images';
+$title-lg:24px;
+$title-sm:14px;
+$caption:12px;
+$breakpoint-desktopToLaptop: 1024px;
+$breakpoint-desktop: 1920px;
+
+@mixin desktopToLaptop {
+  @media (min-width: #{$breakpoint-desktopToLaptop }) and (max-width: $breakpoint-desktop - 1) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}

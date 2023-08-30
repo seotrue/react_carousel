@@ -1,0 +1,140 @@
+@import "reset";
+@import "font";
+@import "variable";
+
+// layout
+.container {
+  font-family: 'Noto Sans KR', sans-serif !important;
+  font-weight: 300;
+  display: flex;
+  flex-wrap: nowrap;
+  .sideBarMenu {
+    width: 60px;
+  }
+  .page {
+    width: calc(100% - 60px);
+  }
+
+  // 컨테이너 영역
+  @include  desktopToLaptop {
+    .carouselWrap {
+      max-width: 826px;
+    }
+  }
+  @include desktop {
+    .carouselWrap {
+     max-width: 1564px;
+    }
+  }
+}
+
+
+.content {
+  // title
+  .pageTitleArea{
+      width: 100%;
+      line-height: 32px;
+      padding: 68px 32px 32px 32px;
+      box-shadow:0 10px 20px 0 rgb(0, 0, 0, 0.25);
+      font-size: $title-lg  ;
+      font-weight: 400;
+      span.bul {
+        vertical-align: text-bottom;
+      }
+      span.tit{
+        margin-left: 26px;
+      }
+  }
+  .inner{
+    padding:0 32px;
+    .listTitle {
+      height: 36px;
+      line-height: 36px;
+      padding-top: 32px;
+      margin-bottom: 8px;
+      color: rgba(0, 0, 0, 0.8);
+      font-size: 14px;
+      span {
+        margin-left: 16px;
+        color: rgba(0, 0, 0, 0.4);
+        font-size: 12px;
+      }
+    }
+    // carouse
+    .carouselWrap {
+      overflow: hidden;
+      position: relative;
+      width: fit-content;
+      padding: 0 52px;
+      box-sizing: border-box;
+      .bookBoxWrap {
+        overflow: hidden;
+      }
+      .bookBox {
+        display: flex;
+        align-items: flex-start;
+        .bookItem {
+          position: relative;
+          width: 230px;
+          height: 260px;
+          flex-shrink: 0;
+          padding-left: 16px;
+          &:first-child{
+            padding-left: 0;
+            .bookInner {
+              left:40px
+            }
+          }
+          .bookInner {
+            position: absolute;
+            top: 10px;
+            left: 56px;
+          }
+          .bookTit {
+            margin: 13px 0px 0 5px ;
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 14px;
+          }
+          .bookSub {
+            margin: 4px 0 0 5px;
+            color: rgba(0, 0, 0, 0.4);
+            font-size: 14px;
+          }
+        }
+      }
+      .btn {
+        position: absolute;
+        top: 50%;
+        margin-top: -18px;
+        width: 36px;
+        height: 36px;
+        border-radius: 18px;
+        opacity: 60%;
+        border: 0;
+        background-color: transparent;
+        &:hover {
+          width: 36px;
+          height: 36px;
+          border-radius: 18px;
+          background: rgb(0,0,0,5%);
+        }
+        &:active {
+          width: 36px;
+          height: 36px;
+          border-radius: 18px;
+          background: rgb(0,0,0,20%);
+        }
+        &.btnPrev {
+          left: 0;
+        }
+        &.btnNext {
+          right: 0;
+        }
+      }
+    }
+  }
+}
+
+
+
+

@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+/* Mobile Global Reset */
+html, body, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea,
+    div, dl, dt, dd, ul, ol, li, p, section, article, header, footer, blockquote, th, td, img { margin:0; padding:0; }
+body { -webkit-text-size-adjust:none; }
+li { list-style:none; }
+img, fieldset { border:0; vertical-align:middle; }
+table { table-layout:fixed; width:100%; border:0; border-spacing:0; border-collapse:collapse; }
+table img { vertical-align:middle; }
+caption { display:none; }
+th, td { border:0; word-wrap:break-word; }
+legend { visibility:hidden; position:absolute; left:-9999px; top:-9999px; width:0; height:0; line-height:0; }
+button { overflow:visible; padding:0; margin:0; border:0; cursor:pointer; }
+hr.layout { display:none; }
+a { text-decoration:none; }
+a:hover { text-decoration:none; }
+input, select, textarea { vertical-align:middle; }
+input[type="text"], input[type="password"], input[type="tel"], input[type="email"], input[type="url"], select, textarea { -webkit-appearance:none; -moz-appearance:none; appearance:none; -webkit-border-radius:0; }
+button::-moz-focus-inner { padding:0; }
+input[type="checkbox"] { -webkit-tap-highlight-color:rgba(0, 0, 0, 0); -webkit-focus-ring-color:rgba(0, 0, 0, 0); }
+section, article, header, footer { display:block; }
+pre { color:inherit; line-height:inherit; font-size:inherit; }
+mark { background:none; }
+template {display:none;} /*template IE 11 에서도 해당 부분 dom 에서 읽고 출력해서 display none 처리*/
